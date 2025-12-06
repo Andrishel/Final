@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: proteger-db-usuarios
+spec:
+  podSelector:
+    matchLabels:
+      app: db-usuarios # A quién protegemos (la BD)
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          app: ms-usuarios # Solo dejamos pasar a este
+    ports:
+    - protocol: TCP
+      port: 5432
