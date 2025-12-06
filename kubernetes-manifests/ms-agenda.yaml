@@ -58,7 +58,7 @@ spec:
               
             # --- Variables de Conexión a la Base de Datos (PostgreSQL) ---
             - name: DB_HOST
-              value: db-agenda # Nombre del Service de la BD
+              value: db-agenda-postgresql # Nombre del Service de la BD
             - name: DB_PORT
               value: "5432" # Puerto estándar de Postgres
             - name: DB_USER

@@ -64,7 +64,7 @@ spec:
 
             # --- Conexión a la Base de Datos (PostgreSQL) ---
             - name: DB_HOST
-              value: db-tutorias
+              value: db-tutorias-postgresql
             - name: DB_PORT
               value: "5432" 
             - name: DB_USER
